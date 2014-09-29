@@ -1,6 +1,6 @@
 {
   "name": "grunt-raml2html",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "description": "Grunt plugin to compile raml to html",
   "directories": {
     "test": "test"
@@ -32,6 +32,7 @@
     "grunt-contrib-coffee": "~0.11.0",
     "grunt-contrib-watch": "~0.6.0",
     "grunt-mocha-test": "~0.12.0",
+    "grunt-cli": "~0.1.0",
     "jit-grunt": "~0.8.0",
     "mocha": "~1.21.0",
     "time-grunt": "~1.0.0"
