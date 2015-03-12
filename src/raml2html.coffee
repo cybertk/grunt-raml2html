@@ -7,13 +7,18 @@ module.exports = (grunt) ->
     rootObject ?= false
     use_https ?= false
 
+    {main, resource, item} = @tamplates()
+    main ?= false
+    resource ?= false
+    item ?= false
+
     @files.forEach ({src, dest}) ->
       grunt.log.debug("Compiling #{src} to #{dest}")
 
       [source] = src
 
       done = async()
-      config = raml2html.getDefaultConfig(use_https);
+      config = raml2html.getDefaultConfig(use_https, main, resource, item);
       raml2html.render source, config, (html) ->
         grunt.file.write dest, html
         grunt.log.writeln("File #{dest.cyan} created.")
