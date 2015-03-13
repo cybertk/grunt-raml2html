@@ -30,12 +30,14 @@ In your project's Gruntfile, add a section named `raml2html` to the data object 
 ```js
 grunt.initConfig({
   raml2html: {
-    options: {
-      // Task-specific options go here.
-    },
-    default: {
-      // Target-specific file lists and/or options go here.
-    },
+    all: {
+      options: {
+        // Task-specific options go here.
+      },
+      default: {
+        // Target-specific file lists and/or options go here.
+      }
+    }
   },
 });
 ```
@@ -62,10 +64,12 @@ In this example, the default options are used to do something with whatever. So 
 ```js
 grunt.initConfig({
   raml2html: {
-    options: {},
-    files: {
-      'dest/api.html': ['api.raml'],
-    },
+    all: {
+      options: {},
+      files: {
+        'dest/api.html': ['api.raml'],
+      }
+    }
   },
 });
 ```
@@ -76,13 +80,36 @@ In this example, custom options are used to do something else with whatever else
 ```js
 grunt.initConfig({
   raml2html: {
-    options: {
-      separator: ': ',
-      punctuation: ' !!!',
-    },
-    files: {
-      'dest/api.html': ['src/github.raml'],
-    },
+    all: {
+      options: {
+        separator: ': ',
+        punctuation: ' !!!'
+      },
+      files: {
+        'dest/api.html': ['src/github.raml'],
+      }
+    }
+  },
+});
+```
+
+#### Custom Templeta
+
+In this example, using custom template for main content
+
+```js
+grunt.initConfig({
+  raml2html: {
+    all: {
+      templates: {
+        main: 'template.handlebars',
+        resource: 'resource.handlebars',
+        item: 'item.handlebars'
+      },
+      files: {
+        'dest/api.html': ['src/github.raml'],
+      }
+    }
   },
 });
 ```
@@ -92,4 +119,3 @@ In lieu of a formal styleguide, take care to maintain the existing coding style.
 
 
 [![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/cybertk/grunt-raml2html/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
-
