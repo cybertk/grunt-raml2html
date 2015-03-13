@@ -3,11 +3,11 @@ raml2html = require 'raml2html'
 module.exports = (grunt) ->
   grunt.registerMultiTask 'raml2html', 'Compile raml files to html', ->
     async = @async
-    {rootObject, use_https} = @options()
+    {rootObject, use_https, templates} = @options()
     rootObject ?= false
     use_https ?= false
 
-    {main, resource, item} = @tamplates()
+    {main, resource, item} = templates
     main ?= false
     resource ?= false
     item ?= false

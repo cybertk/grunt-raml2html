@@ -19,7 +19,9 @@
     "raml2html",
     "grunt"
   ],
-  "author": "Quanlong",
+  "author": {
+    "name": "Quanlong"
+  },
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/cybertk/grunt-raml2html/issues"
@@ -39,5 +41,11 @@
   },
   "dependencies": {
     "raml2html": "^1.0.4"
-  }
+  },
+  "readme": "## grunt-raml2html\n\n> Compile RAML to HTML\n\n[![Build Status](http://img.shields.io/travis/cybertk/grunt-raml2html.svg?style=flat)](https://travis-ci.org/cybertk/grunt-raml2html)\n[![Dependency Status](https://david-dm.org/cybertk/grunt-raml2html.png)](https://david-dm.org/cybertk/grunt-raml2html)\n[![devDependency Status](https://david-dm.org/cybertk/grunt-raml2html/dev-status.svg)](https://david-dm.org/cybertk/grunt-raml2html#info=devDependencies)\n[![Coverage Status](https://coveralls.io/repos/cybertk/grunt-raml2html/badge.png?branch=master)](https://coveralls.io/r/cybertk/grunt-raml2html?branch=master)\n\n## Getting Started\nThis plugin requires Grunt `~0.4.5`\n\nIf you haven't used [Grunt](http://gruntjs.com/) before, be sure to check out the [Getting Started](http://gruntjs.com/getting-started) guide, as it explains how to create a [Gruntfile](http://gruntjs.com/sample-gruntfile) as well as install and use Grunt plugins. Once you're familiar with that process, you may install this plugin with this command:\n\n```shell\nnpm install grunt-raml2thml --save-dev\n```\n\nOnce the plugin has been installed, it may be enabled inside your Gruntfile with this line of JavaScript:\n\n```js\ngrunt.loadNpmTasks('grunt-raml2html');\n```\n\n## The \"raml2html\" task\n\n### Overview\nIn your project's Gruntfile, add a section named `raml2html` to the data object passed into `grunt.initConfig()`.\n\n```js\ngrunt.initConfig({\n  raml2html: {\n    all: {\n      options: {\n        // Task-specific options go here.\n      },\n      default: {\n        // Target-specific file lists and/or options go here.\n      }\n    }\n  },\n});\n```\n\n### Options\n\n#### options.separator\nType: `String`\nDefault value: `',  '`\n\nA string value that is used to do something with whatever.\n\n#### options.punctuation\nType: `String`\nDefault value: `'.'`\n\nA string value that is used to do something else with whatever else.\n\n### Usage Examples\n\n#### Default Options\nIn this example, the default options are used to do something with whatever. So if the `testing` file has the content `Testing` and the `123` file had the content `1 2 3`, the generated result would be `Testing, 1 2 3.`\n\n```js\ngrunt.initConfig({\n  raml2html: {\n    all: {\n      options: {},\n      files: {\n        'dest/api.html': ['api.raml'],\n      }\n    }\n  },\n});\n```\n\n#### Custom Options\nIn this example, custom options are used to do something else with whatever else. So if the `testing` file has the content `Testing` and the `123` file had the content `1 2 3`, the generated result in this case would be `Testing: 1 2 3 !!!`\n\n```js\ngrunt.initConfig({\n  raml2html: {\n    all: {\n      options: {\n        separator: ': ',\n        punctuation: ' !!!'\n      },\n      files: {\n        'dest/api.html': ['src/github.raml'],\n      }\n    }\n  },\n});\n```\n\n#### Custom Templeta\n\nIn this example, using custom template for main content\n\n```js\ngrunt.initConfig({\n  raml2html: {\n    all: {\n      templates: {\n        main: 'template.handlebars',\n        resource: 'resource.handlebars',\n        item: 'item.handlebars'\n      },\n      files: {\n        'dest/api.html': ['src/github.raml'],\n      }\n    }\n  },\n});\n```\n\n## Contributing\nIn lieu of a formal styleguide, take care to maintain the existing coding style. Add unit tests for any new or changed functionality. Lint and test your code using [Grunt](http://gruntjs.com/).\n\n\n[![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/cybertk/grunt-raml2html/trend.png)](https://bitdeli.com/free \"Bitdeli Badge\")\n",
+  "readmeFilename": "README.md",
+  "_id": "grunt-raml2html@0.1.0",
+  "_shasum": "1740f52bac654a060b6be51b49f6559e0e3664d5",
+  "_resolved": "git+https://github.com/iddar/grunt-raml2html#a7203e61b8921b81185b7b63bb0e074d86bdcae0",
+  "_from": "grunt-raml2html@git+https://github.com/iddar/grunt-raml2html"
 }
