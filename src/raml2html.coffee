@@ -6,6 +6,7 @@ module.exports = (grunt) ->
     {rootObject, use_https, templates} = @options()
     rootObject ?= false
     use_https ?= false
+    templates ?= false
 
     {main, resource, item} = templates
     main ?= false
