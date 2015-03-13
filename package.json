@@ -19,7 +19,9 @@
     "raml2html",
     "grunt"
   ],
-  "author": "Quanlong",
+  "author": {
+    "name": "Quanlong"
+  },
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/cybertk/grunt-raml2html/issues"

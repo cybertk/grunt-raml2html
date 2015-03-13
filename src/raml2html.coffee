@@ -3,9 +3,15 @@ raml2html = require 'raml2html'
 module.exports = (grunt) ->
   grunt.registerMultiTask 'raml2html', 'Compile raml files to html', ->
     async = @async
-    {rootObject, use_https} = @options()
+    {rootObject, use_https, templates} = @options()
     rootObject ?= false
     use_https ?= false
+    templates ?= false
+
+    {main, resource, item} = templates
+    main ?= false
+    resource ?= false
+    item ?= false
 
     @files.forEach ({src, dest}) ->
       grunt.log.debug("Compiling #{src} to #{dest}")
@@ -13,7 +19,7 @@ module.exports = (grunt) ->
       [source] = src
 
       done = async()
-      config = raml2html.getDefaultConfig(use_https);
+      config = raml2html.getDefaultConfig(use_https, main, resource, item);
       raml2html.render source, config, (html) ->
         grunt.file.write dest, html
         grunt.log.writeln("File #{dest.cyan} created.")
