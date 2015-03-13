@@ -28,6 +28,6 @@ build/Release
 node_modules
 
 # Coffee genereated
-#tasks
+tasks
 
 assets
