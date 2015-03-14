@@ -2,10 +2,10 @@
 
 > Compile RAML to HTML
 
+[![npm](https://img.shields.io/npm/v/grunt-raml2html.svg)]()
 [![Build Status](http://img.shields.io/travis/cybertk/grunt-raml2html.svg?style=flat)](https://travis-ci.org/cybertk/grunt-raml2html)
-[![Dependency Status](https://david-dm.org/cybertk/grunt-raml2html.png)](https://david-dm.org/cybertk/grunt-raml2html)
+[![Dependency Status](https://david-dm.org/cybertk/grunt-raml2html.svg)](https://david-dm.org/cybertk/grunt-raml2html)
 [![devDependency Status](https://david-dm.org/cybertk/grunt-raml2html/dev-status.svg)](https://david-dm.org/cybertk/grunt-raml2html#info=devDependencies)
-[![Coverage Status](https://coveralls.io/repos/cybertk/grunt-raml2html/badge.png?branch=master)](https://coveralls.io/r/cybertk/grunt-raml2html?branch=master)
 
 ## Getting Started
 This plugin requires Grunt `~0.4.5`
