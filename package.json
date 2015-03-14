@@ -31,12 +31,15 @@
     "chai": "~2.1.1",
     "coffee-script": "~1.9.1",
     "grunt": "~0.4.5",
+    "grunt-cli": "~0.1.13",
+    "grunt-coffeecov": "^0.1.5",
     "grunt-contrib-coffee": "~0.13.0",
     "grunt-contrib-watch": "~0.6.1",
     "grunt-mocha-test": "~0.12.7",
-    "grunt-cli": "~0.1.13",
+    "grunt-shell": "^1.1.2",
     "jit-grunt": "~0.9.1",
     "mocha": "~2.2.1",
+    "mocha-phantom-coverage-reporter": "^0.1.0",
     "time-grunt": "~1.1.0"
   },
   "dependencies": {
