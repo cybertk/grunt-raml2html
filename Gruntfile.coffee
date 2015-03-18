@@ -2,13 +2,8 @@ module.exports = (grunt) ->
 
   require('time-grunt') grunt
 
-  ###
-  Dynamically load npm tasks
-  ###
+  # Dynamically load npm tasks
   require('jit-grunt') grunt
-
-  grunt.loadNpmTasks('grunt-contrib-coffee')
-  grunt.loadNpmTasks('grunt-mocha-test')
 
   # Actually load this plugin's task(s).
   grunt.loadTasks('tasks')
@@ -38,12 +33,21 @@ module.exports = (grunt) ->
         dest: 'tasks/',
         ext: '.js'
 
+    coffeecov:
+      compile:
+        src: 'src'
+        dest: 'tasks'
+
     mochaTest:
       test:
         options:
-          reporter: 'spec'
+          reporter: 'mocha-phantom-coverage-reporter'
           require: 'coffee-script/register'
         src: ['test/**/*.coffee']
+
+    shell:
+      coveralls:
+        command: 'cat coverage/coverage.lcov | ./node_modules/coveralls/bin/coveralls.js src'
 
     # Before generating any new files, remove any previously-created files.
     clean:
@@ -59,14 +63,20 @@ module.exports = (grunt) ->
         ext: '.html'
 
 
+  grunt.registerTask 'uploadCoverage', ->
+    return grunt.log.ok 'Bypass uploading' unless process.env['TRAVIS'] is 'true'
+
+    grunt.task.run 'shell:coveralls'
+
   grunt.registerTask "default", [
     "watch"
   ]
 
   grunt.registerTask "test", [
-    "coffee"
+    "coffeecov"
     "raml2html"
     "mochaTest"
+    "uploadCoverage"
   ]
 
   return
