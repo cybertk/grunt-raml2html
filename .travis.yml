@@ -1,5 +1,13 @@
 language: node_js
 node_js:
-  - "0.10"
+- '0.10'
 env:
-  - NODE_ENV=development
+- NODE_ENV=development
+deploy:
+  provider: npm
+  email: kyan.ql.he@gmail.com
+  api_key:
+    secure: TQrUNUhK+UvHDTnzIYUnyLp9/d2ehQmfhmqq60DuspkRbte/I+4+vZ+Ytm5+TYX9C+rWqS14sOPPUBY1WJm2VHAl2s84Zgfcdimj1iM3lfgWjUhnouoNFLimZJrgfEl+FNdrIX3yIM6Qk+R/+Y19a8g1mpp+CT52nir0+Jpldpw=
+  on:
+    tags: true
+    repo: cybertk/grunt-raml2html
