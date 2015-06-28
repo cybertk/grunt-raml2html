@@ -27,7 +27,7 @@ module.exports = (grunt) ->
 
       , (error) ->
         grunt.log.error(error)
-        next()
+        done(false)
 
       grunt.log.debug("Compiled #{src}")
 
