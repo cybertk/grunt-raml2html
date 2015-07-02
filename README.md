@@ -65,7 +65,6 @@ In this example, the default options are used to do something with whatever. So 
 grunt.initConfig({
   raml2html: {
     all: {
-      options: {},
       files: {
         'dest/api.html': ['api.raml'],
       }
@@ -95,16 +94,15 @@ grunt.initConfig({
 
 #### Custom Template
 
-In this example, using custom template for main content
+Custom templates can be loaded using the following. Both mainTemplate and templatesPath are required in this case. Other templates, such as resource.nunjucks and item.nunjucks are now seen as part of the main template. Therefore they cannot be set individually.
 
 ```js
 grunt.initConfig({
   raml2html: {
     all: {
-      templates: {
-        main: 'template.handlebars',
-        resource: 'resource.handlebars',
-        item: 'item.handlebars'
+      options: {
+        mainTemplate: 'template.nunjucks',
+        templatesPath: './my/custom/path'
       },
       files: {
         'dest/api.html': ['src/github.raml'],
