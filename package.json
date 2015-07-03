@@ -1,6 +1,6 @@
 {
   "name": "grunt-raml2html",
-  "version": "0.3.0",
+  "version": "0.3.1",
   "description": "Grunt plugin to compile raml to html",
   "directories": {
     "test": "test"
