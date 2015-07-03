@@ -11,3 +11,6 @@ deploy:
   on:
     tags: true
     repo: cybertk/grunt-raml2html
+notifications:
+  slack:
+    secure: VKaTm675eHHFcrKlpkmZ6I158vlIBE9NJmgN8/ZNenOZEF1P6xe+nyT6KpM6W15cpSHoeH0u6eqFY8aemkeYA+5LI+OHxgksr4F2XFKdRijgPcpiW8U41JV0uTnCVxBs8ijm7ojuirJKqbQP/ikxKsctOe9c8ChNycZv9kC2kgQ=
