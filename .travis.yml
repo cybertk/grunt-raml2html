@@ -1,16 +1,18 @@
+sudo: false
 language: node_js
-node_js:
-- '0.10'
-env:
-- NODE_ENV=development
-deploy:
-  provider: npm
-  email: kyan.ql.he@gmail.com
-  api_key:
-    secure: TQrUNUhK+UvHDTnzIYUnyLp9/d2ehQmfhmqq60DuspkRbte/I+4+vZ+Ytm5+TYX9C+rWqS14sOPPUBY1WJm2VHAl2s84Zgfcdimj1iM3lfgWjUhnouoNFLimZJrgfEl+FNdrIX3yIM6Qk+R/+Y19a8g1mpp+CT52nir0+Jpldpw=
-  on:
-    tags: true
-    repo: cybertk/grunt-raml2html
+cache:
+  directories:
+    - node_modules
 notifications:
-  slack:
-    secure: VKaTm675eHHFcrKlpkmZ6I158vlIBE9NJmgN8/ZNenOZEF1P6xe+nyT6KpM6W15cpSHoeH0u6eqFY8aemkeYA+5LI+OHxgksr4F2XFKdRijgPcpiW8U41JV0uTnCVxBs8ijm7ojuirJKqbQP/ikxKsctOe9c8ChNycZv9kC2kgQ=
+  email: false
+node_js:
+  - '4'
+before_install:
+  - npm i -g npm@^2.0.0
+before_script:
+  - npm prune
+after_success:
+  - npm run semantic-release
+branches:
+  except:
+    - "/^v\\d+\\.\\d+\\.\\d+$/"
