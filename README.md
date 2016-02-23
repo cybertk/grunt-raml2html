@@ -2,7 +2,7 @@
 
 > Compile RAML to HTML
 
-[![npm](https://img.shields.io/npm/v/grunt-raml2html.svg)]()
+[![npm](https://img.shields.io/npm/v/grunt-raml2html.svg)](https://www.npmjs.com/package/grunt-raml2html)
 [![Build Status](http://img.shields.io/travis/cybertk/grunt-raml2html.svg?style=flat)](https://travis-ci.org/cybertk/grunt-raml2html)
 [![Dependency Status](https://david-dm.org/cybertk/grunt-raml2html.svg)](https://david-dm.org/cybertk/grunt-raml2html)
 [![devDependency Status](https://david-dm.org/cybertk/grunt-raml2html/dev-status.svg)](https://david-dm.org/cybertk/grunt-raml2html#info=devDependencies)
