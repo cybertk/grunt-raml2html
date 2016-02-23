@@ -35,7 +35,7 @@
     "grunt-contrib-watch": "~0.6.1",
     "grunt-mocha-test": "~0.12.7",
     "grunt-cli": "~0.1.13",
-    "jit-grunt": "~0.9.1",
+    "jit-grunt": "~0.10.0",
     "mocha": "~2.4.5",
     "time-grunt": "~1.3.0"
   },
