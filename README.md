@@ -6,6 +6,7 @@
 [![Build Status](http://img.shields.io/travis/cybertk/grunt-raml2html.svg?style=flat)](https://travis-ci.org/cybertk/grunt-raml2html)
 [![Dependency Status](https://david-dm.org/cybertk/grunt-raml2html.svg)](https://david-dm.org/cybertk/grunt-raml2html)
 [![devDependency Status](https://david-dm.org/cybertk/grunt-raml2html/dev-status.svg)](https://david-dm.org/cybertk/grunt-raml2html#info=devDependencies)
+[![semantic-release](https://img.shields.io/badge/%20%20%F0%9F%93%A6%F0%9F%9A%80-semantic--release-e10079.svg)](https://github.com/semantic-release/semantic-release)
 
 ## Getting Started
 This plugin requires Grunt `~0.4.5`
