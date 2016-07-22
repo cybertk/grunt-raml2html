@@ -41,7 +41,7 @@
     "semantic-release": "^4.3.5"
   },
   "dependencies": {
-    "async": "~1.5.2",
+    "async": "~2.0.1",
     "raml2html": "~2.4.0"
   },
   "peerDependencies": {
