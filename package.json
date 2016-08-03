@@ -46,5 +46,8 @@
   },
   "peerDependencies": {
     "grunt": ">=0.4.0"
+  },
+  "release": {
+    "verifyConditions": "./node_modules/@semantic-release/condition-travis-allow-pr"
   }
 }
