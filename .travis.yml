@@ -13,7 +13,8 @@ before_script:
   - npm prune
 after_success:
   - npm install github:cybertk/condition-travis-allow-pr
-  - npm run semantic-release
+  - npm install github:cybertk/commit-analyzer-fallback-to-minor
+  - TRAVIS_PULL_REQUEST=false TRAVIS_BRANCH=master npm run semantic-release
 branches:
   except:
     - "/^v\\d+\\.\\d+\\.\\d+$/"

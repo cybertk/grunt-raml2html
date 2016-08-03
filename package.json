@@ -7,7 +7,7 @@
   "scripts": {
     "prepublish": "grunt coffee",
     "test": "grunt coffee && grunt test",
-    "semantic-release": "semantic-release pre && npm publish && semantic-release post"
+    "semantic-release": "semantic-release pre && echo npm publish && semantic-release post"
   },
   "repository": {
     "type": "git",
@@ -48,6 +48,7 @@
     "grunt": ">=0.4.0"
   },
   "release": {
+    "analyzeCommits": "./node_modules/@semantic-release/commit-analyzer-fallback-to-minor",
     "verifyConditions": "./node_modules/@semantic-release/condition-travis-allow-pr"
   }
 }
