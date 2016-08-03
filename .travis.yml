@@ -12,6 +12,7 @@ before_install:
 before_script:
   - npm prune
 after_success:
+  - npm install github:cybertk/condition-travis-allow-pr
   - npm run semantic-release
 branches:
   except:
