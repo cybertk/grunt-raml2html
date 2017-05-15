@@ -29,7 +29,7 @@
   "homepage": "https://github.com/cybertk/grunt-raml2html",
   "devDependencies": {
     "chai": "~3.5.0",
-    "coffee-script": "~1.11.1",
+    "coffee-script": "~1.12.6",
     "grunt": "~1.0.1",
     "grunt-contrib-coffee": "~1.0.0",
     "grunt-contrib-watch": "~1.0.0",
